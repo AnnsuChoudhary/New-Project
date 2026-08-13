@@ -32,15 +32,31 @@ student_management/
 ## Requirements
 
 - Python 3.8+
-- No external dependencies (standard library only)
+- CLI version: no external dependencies (standard library only)
+- Web GUI version: `streamlit`, `pandas` (see `requirements.txt`)
 
 ## How to Run
 
+### CLI version
 ```bash
 git clone <your-repo-url>
 cd student_management
 python main.py
 ```
+
+### Web GUI version
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+This opens the app in your browser at `http://localhost:8501`. Both the CLI
+(`main.py`) and the GUI (`app.py`) share the exact same underlying logic
+(`student.py`, `student_manager.py`, `file_handler.py`, `exceptions.py`) —
+no duplicated code, just two different interfaces on top of it.
+
+## Live Demo
+
+🔗 **Deployed app:** _[add your Streamlit Cloud URL here after deploying]_
 
 ## Usage
 
